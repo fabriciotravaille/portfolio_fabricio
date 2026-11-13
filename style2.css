@@ -1,0 +1,266 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 233, 233);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: #c7c5c5;
+    padding: 30px 15px 10px 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #000000;
+}
+
+.menu div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.2em;
+    color: #c7c5c5;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.menu a:hover {
+    color: #8f8e8d;
+    border-bottom-color: #b61d1d;
+}
+
+.ativo {
+    color: #947041;
+    border-bottom-color: #6b6767;
+}
+
+.bienvenue {
+    font-size: 2.4em;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.rodape {
+    background-color: #000000;
+    color: #c7c5c5;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 40px;
+    border-top: 10px solid #d4a373;
+}
+
+.midias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.midias a {
+    text-decoration: none;
+    color: #d4a373;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.midias a:hover {
+    color: #947041;
+    border-bottom: 1px solid #6b6767;
+    padding-bottom: 5px;
+}
+
+.calculadora {
+    border: 5px double #333;
+    border-radius: 14px;
+    background-color: #181818;
+    border-color: #947041;
+    max-width: 900px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 15px;
+}
+
+.titulo {
+    font-size: 1.5em;
+    color: white;
+    margin-left: 10px;
+}
+
+.paragra {
+    color: #a8a8a8;
+    font-size: 1.4em;
+}
+
+.link {
+    text-decoration: none;
+    padding: 30px 15px;
+    color: #947041;
+}
+
+.link:hover {
+    color: #8f8e8d;
+    border-bottom-color: #b61d1d;
+}
+
+.bi1 {
+    color: white;
+    padding-bottom: 10px;
+}
+
+.passos {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.conteudo {
+    border-left: 5px solid #d4a373;
+    padding-left: 25px;
+    margin-top: 20px;
+}
+
+.texto-conteudo, .texto-conteudo1 {
+    font-size: 1.05em;
+    color: #423b3b;
+    line-height: 1.7;
+    margin-bottom: 20px;
+    transform-origin: left center;
+    animation: crescerLetras 1.2s ease-out forwards;
+}
+
+.texto-conteudo1 {
+    animation-delay: 0.2s;
+}
+
+.lista-temas h2 {
+    color: #000000;
+    font-size: 1.5em;
+    margin-top: 30px;
+}
+
+.lista-temas ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.itens {
+    color: #0f0f0f;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding-bottom: 5px;
+    border-bottom: 2px solid #d4a373;
+    transform-origin: left center;
+    animation: crescerLetras 1.4s ease-out forwards;
+}
+
+.itens i {
+    margin-right: 6px;
+}
+
+@keyframes crescerLetras {
+    0% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    70% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 20px 10px 10px 10px;
+    }
+
+    .bienvenue {
+        font-size: 1.8em;
+    }
+
+    .calculadora {
+        width: 92%;
+        margin: 25px auto;
+        padding: 20px 15px;
+        text-align: center;
+    }
+
+    .titulo {
+        font-size: 1.2em;
+        display: block;
+        margin-left: 0;
+        margin-top: 8px;
+    }
+
+    .paragra {
+        font-size: 1.05em;
+        line-height: 1.5;
+    }
+
+    .conteudo {
+        border-left: none;
+        border-top: 4px solid #d4a373;
+        padding-left: 0;
+        padding-top: 20px;
+        text-align: center;
+    }
+
+    .texto-conteudo, .texto-conteudo1, .itens {
+        transform-origin: center center;
+    }
+
+    .lista-temas ul {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu div {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bienvenue {
+        font-size: 1.5em;
+    }
+
+    .midias {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}

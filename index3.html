@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projetos</title>
+    <link rel="stylesheet" href="style3.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <script>
+    function copiarEmail() {
+        const email = "fabriciotravaille@gmail.com";
+        navigator.clipboard.writeText(email).then(() => {
+            alert("E-mail copiado com sucesso: " + email);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>Portfólio Fabricio Dutra de Oliveira Rodrigues</header>
+    <nav class="menu">
+        <div class="espaco"></div>
+        <div>
+            <a  href="index.html">Página Inicial</a>
+            <a  href="index2.html">Projetos</a>
+            <a class="ativo" href="index3.html">Contato</a>
+        </div>
+    </nav>
+    <h1 class="bienvenue">Bem-vindo à minha página de Contatos!</h1>
+
+        <div class="container-contato">
+        <p class="texto-contato">
+            Fique à vontade para entrar em contato comigo para trocar ideias, falar sobre projetos ou oportunidades na área de tecnologia. Escolha um dos canais abaixo para entrar em contato comigo, ou caso queira acompanhe meu trabalho de perto!
+        </p>
+
+        <div class="card-rotativo">
+            <div class="card-item item-github">
+                <i class="bi bi-github"></i>
+                <h2>GitHub</h2>
+                <p>Veja meus códigos, repositórios e projetos práticos desenvolvidos.</p>
+                <a href="https://github.com/fabriciotravaille" target="_blank" class="btn-contato">Acessar GitHub</a>
+            </div>
+
+            <div class="card-item item-linkedin">
+                <i class="bi bi-linkedin"></i>
+                <h2>LinkedIn</h2>
+                <p>Acompanhe minha trajetória profissional e conexões na área.</p>
+                <a href="https://www.linkedin.com/in/dutrafabricio/" target="_blank" class="btn-contato">Acessar LinkedIn</a>
+            </div>
+
+            <div class="card-item item-gmail">
+                <i class="bi bi-envelope-fill"></i>
+                <h2>Gmail</h2>
+                <p>Copie meu e-mail para entrar em contato facilmente.</p>
+                <button class="btn-contato" onclick="copiarEmail()">Copiar E-mail</button>
+            </div>
+        </div>
+    </div>
+    <div class="area-curtida">
+    <button class="btn-curtir" onclick="curtirPortfolio()">👍 Curtir Portfólio</button>
+    <p class="texto-curtida">Total de curtidas: <span id="contador-curtidas">0</span></p>
+    </div>
+
+     <footer class="rodape">
+        <div class="direitos">
+            <h2>Site Desenvolvido por Fabricio Dutra - 11/2026</h2>
+        </div>
+        <div class="midias">
+            <a href="https://github.com/fabriciotravaille" target="_blank">
+                <i class="bi bi-github"></i> GitHub
+            </a>
+            <a href="https://www.linkedin.com/in/dutrafabricio/" target="_blank">
+                <i class="bi bi-linkedin"></i> LinkedIn
+            </a>
+            <a href="mailto:fabriciotravaille@gmail.com">
+                <i class="bi bi-envelope-fill"></i> Gmail
+            </a>
+        </div>
+    </footer> 
+    <script>
+        var total = 0;
+
+        function curtirPortfolio() {
+            total = total + 1;
+            var numero = document.getElementById("contador-curtidas");
+            numero.textContent = total;
+        }
+    </script>
+</body>
+</html>

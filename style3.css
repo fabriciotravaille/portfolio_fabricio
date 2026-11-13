@@ -1,0 +1,274 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 233, 233);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: #c7c5c5;
+    padding: 30px 15px 10px 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #000000;
+}
+
+.menu div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+nav a {
+    font-size: 1.2em;
+    color: #c7c5c5;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+.menu a:hover {
+    color: #8f8e8d;
+    border-bottom-color: #b61d1d;
+}
+
+.ativo {
+    color: #947041;
+    border-bottom-color: #6b6767;
+}
+
+.bienvenue {
+    font-size: 2.4em;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.container-contato {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+    text-align: center;
+}
+
+.texto-contato {
+    font-size: 1.2em;
+    color: #423b3b;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.card-rotativo {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    height: 320px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.card-item {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #181818;
+    border: 5px double #947041;
+    border-radius: 14px;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transform: scale(0.9);
+    animation: trocarCard 6s infinite;
+}
+
+.card-item i {
+    font-size: 3em;
+    color: #d4a373;
+    margin-bottom: 10px;
+}
+
+.card-item h2 {
+    color: #ffffff;
+    font-size: 1.8em;
+    margin: 10px 0;
+}
+
+.card-item p {
+    color: #a8a8a8;
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.btn-contato {
+    text-decoration: none;
+    background-color: #947041;
+    color: #ffffff;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.btn-contato:hover {
+    background-color: #d4a373;
+    color: #000000;
+}
+
+.item-github {
+    animation-delay: 0s;
+}
+
+.item-linkedin {
+    animation-delay: 2s;
+}
+
+.item-gmail {
+    animation-delay: 4s;
+}
+
+@keyframes trocarCard {
+    0% {
+        opacity: 0;
+        transform: scale(0.9);
+        z-index: 1;
+    }
+    10% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 10;
+    }
+    33% {
+        opacity: 1;
+        transform: scale(1);
+        z-index: 10;
+    }
+    43% {
+        opacity: 0;
+        transform: scale(0.9);
+        z-index: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.9);
+        z-index: 1;
+    }
+}
+
+.rodape {
+    background-color: #000000;
+    color: #c7c5c5;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 60px;
+    border-top: 10px solid #d4a373;
+}
+
+.midias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.midias a {
+    text-decoration: none;
+    color: #d4a373;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.midias a:hover {
+    color: #947041;
+    border-bottom: 1px solid #6b6767;
+    padding-bottom: 5px;
+}
+.area-curtida {
+    text-align: center;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #181818;
+    border: 3px double #947041;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+}
+
+.btn-curtir {
+    background-color: #947041;
+    color: #ffffff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.btn-curtir:hover {
+    background-color: #d4a373;
+    color: #000000;
+    transform: scale(1.05);
+}
+
+.texto-curtida {
+    color: #c7c5c5;
+    font-size: 1.1em;
+    margin-top: 15px;
+}
+
+#contador-curtidas {
+    color: #d4a373;
+    font-weight: bold;
+    font-size: 1.2em;
+}
+
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 20px 10px 10px 10px;
+    }
+
+    .bienvenue {
+        font-size: 1.8em;
+    }
+
+    .card-rotativo {
+        width: 90%;
+        height: 350px;
+    }
+
+    .midias {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+}

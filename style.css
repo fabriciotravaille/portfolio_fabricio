@@ -1,0 +1,296 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: rgb(240, 233, 233);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: rgb(0, 0, 0);
+    color: #c7c5c5;
+    padding: 30px 15px 10px 15px;
+    text-align: center;
+    font-size: 2em;
+}
+
+.menu {
+    text-align: center;
+    padding: 30px 15px;
+    background-color: #000000;
+}
+
+.menu div {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.menu a:hover {
+    color: #8f8e8d;
+    border-bottom-color: #b61d1d;
+}
+nav a {
+    font-size: 1.2em;
+    color: #c7c5c5;
+    text-decoration: none;
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s, border-color 0.3s;
+}
+
+
+
+.ativo {
+    color: #947041;
+    border-bottom-color: #6b6767;
+}
+
+.bienvenue {
+    font-size: 2em;
+    color: #000000;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 0 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.apresentar {
+    text-align: center;
+    margin-top: 30px;
+    padding: 0 20px;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+}
+
+.perfil {
+    display: flex;
+    justify-content: center;
+    border: 7px solid rgb(90, 68, 42);
+    width: 100%;
+    max-width: 350px;
+    aspect-ratio: 1 / 1;
+    flex-shrink: 0;
+    animation: pulsoBorda 3s infinite;
+}
+
+.perfil img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 800px;
+    line-height: 1.6;
+    text-align: left;
+}
+
+.skills {
+    font-size: 1.4em;
+    margin: 40px 20px;
+}
+
+.lista {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.lista li {
+    background-color: #222;
+    color: #fff;
+    padding: 12px 20px;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    border-left: 5px solid rgb(90, 68, 42);
+    font-size: 0.9em;
+    animation: apareceLado 1.2s ease-out;
+    transition: background-color 0.2s ease;
+}
+
+.lista li:hover {
+    background-color: rgb(90, 68, 42);
+}
+
+@keyframes apareceLado {
+    0% {
+        opacity: 0;
+        transform: translateX(-1000px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes pulsoBorda {
+    0% { border-color: rgb(90, 68, 42); }
+    50% { border-color: #d4a373; }
+    100% { border-color: rgb(90, 68, 42); }
+}
+
+.hobbies {
+    max-width: 1000px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.hobbies h2 {
+    margin-bottom: 25px;
+}
+
+.grade {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+}
+
+.card {
+    background-color: #181818;
+    border: 1px solid #333;
+    border-radius: 14px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    transition: border-color 4.3s ease, transform 0.3s ease;
+}
+
+.card:hover {
+    border-color: #d4a373;
+    transform: scale(1.02);
+}
+
+.card-grande {
+    grid-column: span 2;
+}
+
+.card-largo {
+    grid-column: span 2;
+}
+
+.categoria {
+    font-size: 0.75em;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #d4a373;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.card h3 {
+    font-size: 1.25em;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.card p {
+    font-size: 0.9em;
+    color: #aaa;
+    line-height: 1.5;
+}
+
+.rodape {
+    background-color: #000000;
+    color: #c7c5c5;
+    padding: 30px 20px;
+    text-align: center;
+    font-size: 1em;
+    margin-top: 40px;
+    border-top: 10px solid #d4a373;
+}
+
+.midias {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.midias a {
+    text-decoration: none;
+    color: #d4a373;
+    padding: 10px 15px;
+    font-size: 1.2em;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.midias a:hover {
+    color: #947041;
+    border-bottom: 1px solid #6b6767;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 900px) {
+    .apresentar {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .sobre {
+        text-align: center;
+    }
+
+    .perfil {
+        max-width: 280px;
+    }
+
+    .grade {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .card-grande, .card-largo {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        font-size: 1.5em;
+        padding: 20px 10px;
+    }
+
+    .menu div {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .bienvenue {
+        font-size: 1.5em;
+    }
+
+    .perfil {
+        max-width: 220px;
+    }
+
+    .skills {
+        font-size: 1.2em;
+    }
+
+    .grade {
+        grid-template-columns: 1fr;
+    }
+
+    .card-grande, .card-largo {
+        grid-column: span 1;
+    }
+
+    .rodape h2 {
+        font-size: 1em;
+    }
+}
